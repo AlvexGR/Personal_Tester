@@ -14,5 +14,6 @@ namespace DomainLibrary.Models
     public class TestCaseModel : ITestCase
     {
         public int Id { set; get; }
+        public string Name { set; get; }
     }
 }
