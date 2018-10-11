@@ -13,6 +13,6 @@ namespace DomainLibrary.Models
 
     public class TestCaseModel : ITestCase
     {
-
+        public int Id { set; get; }
     }
 }
