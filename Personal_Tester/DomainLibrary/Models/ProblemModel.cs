@@ -8,9 +8,11 @@ namespace DomainLibrary.Models
 {
     public interface IProblem
     {
+        int Id { get; }
     }
 
     public class ProblemModel : IProblem
     {
+        public int Id { get; }
     }
 }
