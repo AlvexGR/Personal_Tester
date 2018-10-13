@@ -1,4 +1,4 @@
 Select a commit you want to jump back
 - From your branch
 - Reset current branch to that commit
-- Hard or Mix or Soft?
+- Hard or Mix or Soft? - It should be hard
