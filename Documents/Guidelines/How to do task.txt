@@ -1,0 +1,18 @@
+Create branch to do a task:
+- Check out develop
+- Create a branch: name of the task separated by underscores
+- Do your task
+
+If you want to switch branch to do other tasks: 
+- From your current branch
+- Commit all your changes
+- Checkout develop
+- Create a branch: name of the task separated by underscores
+- Do your task
+
+If you go back to do your task but you have commited too many commits:
+- Go back to that branch
+- Select the commit to reverse
+- Reset current branch to that commit
+- Select Mix
+- Start working
