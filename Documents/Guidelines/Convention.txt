@@ -1,0 +1,24 @@
+How to name variable
+- We don't use hungarian naming convention
+i.e: cbxSomething, chbSomething, btnDoStuff
+
+- We put the name of the Control or Parent Folder in the suffix
+- firstLetter must be lowercase
+- Use camel instead of underscore
+i.e: startButton, endButton, studentListDataGrid, countryComboBox
+i.e start_button => startButton
+- Show intention, be explicit
+- Be consistent
+i.e: addOne, plusTwo
+
+
+How to name Class, Control, Property, Methods,...
+- FirstLetter must be uppercase
+- Use camel instead of underscore
+- Show intention, be explicit
+void DeleteStudent() {}
+void LetItGo() {}
+
+- Be consistent
+void DeleteStudent() {}
+void RemoveStudent() {}
