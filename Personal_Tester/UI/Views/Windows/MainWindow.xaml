@@ -8,6 +8,34 @@
         WindowStartupLocation="CenterScreen"
         Height="720" Width="1280">
     <Grid>
-        
+        <StackPanel>
+            <Button
+                Name="whiteButton"
+                Height="50"
+                Width="200"
+                Margin="0 20 0 0"
+                FontSize="18"
+                Style="{StaticResource WhiteButton}">
+                Run
+            </Button>
+            <Button
+                Name="redButton"
+                Height="50"
+                Width="200"
+                Margin="0 20 0 0"
+                FontSize="18"
+                Style="{StaticResource RedButton}">
+                Delete
+            </Button>
+            <Button
+                Name="greenButton"
+                Height="50"
+                Width="200"
+                Margin="0 20 0 0"
+                FontSize="18"
+                Style="{StaticResource GreenButton}">
+                Add
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>

@@ -155,12 +155,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Resources\Fonts\" />
+    <Folder Include="Resources\Images\" />
     <Folder Include="ViewModels\Controls\" />
     <Folder Include="ViewModels\TabControls\" />
     <Folder Include="Views\Controls\" />
     <Folder Include="Views\TabControls\" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Resources\Styles\Buttons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Styles\Fonts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Windows\MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
