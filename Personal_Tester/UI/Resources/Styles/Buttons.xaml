@@ -9,6 +9,9 @@
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Width" Value="200"/>
     </Style>
     <Style 
         TargetType="Button"
@@ -62,7 +65,7 @@
         TargetType="Button"
         x:Key="RedButton"
         BasedOn="{StaticResource BaseButton}">
-        <Setter Property="Foreground" Value="#971302"/>
+        <Setter Property="Foreground" Value="#ffffff"/>
         <Setter Property="Effect">
             <Setter.Value>
                 <DropShadowEffect
@@ -80,9 +83,9 @@
                     <Border
                         Name="RedButtonBorder"
                         CornerRadius="2.5"
-                        Background="#fd634e"
+                        Background="#ff0000"
                         BorderThickness="1 1 1 6"
-                        BorderBrush="#ca1902">
+                        BorderBrush="#b30000">
                         <ContentPresenter
                             x:Name="contentPresenter"
                             ContentTemplate="{TemplateBinding ContentTemplate}"
@@ -110,7 +113,7 @@
         TargetType="Button"
         x:Key="GreenButton"
         BasedOn="{StaticResource BaseButton}">
-        <Setter Property="Foreground" Value="#006600"/>
+        <Setter Property="Foreground" Value="#ffffff"/>
         <Setter Property="Effect">
             <Setter.Value>
                 <DropShadowEffect
@@ -128,9 +131,9 @@
                     <Border
                         Name="GreenButtonBorder"
                         CornerRadius="2.5"
-                        Background="#00e600"
+                        Background="#009933"
                         BorderThickness="1 1 1 6"
-                        BorderBrush="#009900">
+                        BorderBrush="#006622">
                         <ContentPresenter
                             x:Name="contentPresenter"
                             ContentTemplate="{TemplateBinding ContentTemplate}"
