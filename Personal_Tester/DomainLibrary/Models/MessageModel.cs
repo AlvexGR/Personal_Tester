@@ -13,7 +13,19 @@ namespace DomainLibrary.Models
         public string Message { get; set; }
         public string Title { get; set; }
         public MessageIconEnum Icon { set; get; }
-        public MessageResultEnum Result { set; get; }
         public MessageButtonEnum Button { set; get; }
+
+        public MessageModel()
+        {
+
+        }
+
+        public MessageModel(string message, string title, MessageIconEnum icon, MessageButtonEnum button)
+        {
+            Message = message;
+            Title = title;
+            Icon = icon;
+            Button = button;
+        }
     }
 }

@@ -1,7 +1,11 @@
-﻿using ReactiveUI;
+﻿using DomainLibrary.Enums;
+using DomainLibrary.Interfaces;
+using DomainLibrary.Models;
+using ReactiveUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reactive.Disposables;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -12,6 +16,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using UI.Helpers;
 using UI.ViewModels.Windows;
 
 namespace UI.Views.Windows
@@ -19,14 +24,79 @@ namespace UI.Views.Windows
     /// <summary>
     /// Interaction logic for MessageWindow.xaml
     /// </summary>
-    public partial class MessageWindow : Window, IViewFor<MessageWindowViewModel>
+    public partial class MessageWindow : Window, IViewFor<IMessageWindowViewModel>
     {
-        public MessageWindowViewModel ViewModel { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        object IViewFor.ViewModel { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        #region Properties
+        public static readonly DependencyProperty ViewModelProperty = DependencyProperty.Register(nameof(ViewModel), typeof(IMessageWindowViewModel), typeof(MessageWindow));
+        public IMessageWindowViewModel ViewModel
+        {
+            get => GetValue(ViewModelProperty) as IMessageWindowViewModel;
+            set => SetValue(ViewModelProperty, value);
+        }
 
-        public MessageWindow()
+        object IViewFor.ViewModel
+        {
+            get => ViewModel;
+            set => ViewModel = value as IMessageWindowViewModel;
+        }
+
+        // List of icon
+        private List<string> imageSource;
+
+        private IMessageModel messageModel;
+        #endregion
+
+        #region Constructor
+        public MessageWindow(string message, string title, MessageIconEnum icon, MessageButtonEnum button)
         {
             InitializeComponent();
+            messageModel = new MessageModel(message, title, icon, button);
+            ViewModel = new MessageWindowViewModel();
+            imageSource = new List<string>()
+            {
+                "pack://application:,,,/Resources/Images/MessageResult/Warning_0.png",
+                "pack://application:,,,/Resources/Images/MessageResult/Success_0.png",
+                "pack://application:,,,/Resources/Images/MessageResult/Error_0.png"
+            };
+
+            this.WhenActivated(d =>
+            {
+                Binding(d);
+            });
         }
+        #endregion
+
+        #region Binding
+        private void Binding(Action<IDisposable> d)
+        {
+            d(this.BindCommand(ViewModel, vm => vm.OkCommand, v => v.okButton));
+            d(ViewModel.OkCommand.Subscribe(x => 
+            {
+                Utility.MessageResult = true;
+                Close();
+            }));
+
+            d(this.BindCommand(ViewModel, vm => vm.CancelCommand, v => v.cancelButton));
+            d(ViewModel.CancelCommand.Subscribe(x => 
+            {
+                Utility.MessageResult = false;
+                Close();
+            }));
+        }
+        #endregion
+
+        #region Events
+        private void messageWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            // Setup view
+            if (messageModel.Button == MessageButtonEnum.OkCancel)
+            {
+                cancelButton.Visibility = Visibility.Visible;
+            }
+            messageTextBlock.Text = messageModel.Message;
+            titleTextBlock.Text = messageModel.Title;
+            iconMessageImage.Source = new BitmapImage(new Uri(imageSource[Convert.ToInt32(messageModel.Icon)], UriKind.Absolute));
+        }
+        #endregion
     }
 }

@@ -13,21 +13,12 @@
         <Setter Property="Height" Value="50"/>
         <Setter Property="Width" Value="200"/>
     </Style>
+    
     <Style 
         TargetType="Button"
         x:Key="WhiteButton"
         BasedOn="{StaticResource BaseButton}">
-        <Setter Property="Foreground" Value="#5f5f6d"/>
-        <Setter Property="Effect">
-            <Setter.Value>
-                <DropShadowEffect
-                    ShadowDepth="1"
-                    Opacity="1"
-                    Direction="230"
-                    BlurRadius="5"
-                    RenderingBias="Quality"/>
-            </Setter.Value>
-        </Setter>
+        <Setter Property="Foreground" Value="#000000"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate
@@ -36,7 +27,7 @@
                         Name="WhiteButtonBorder"
                         CornerRadius="2"
                         Background="#efeff1"
-                        BorderThickness="0 0 0 3"
+                        BorderThickness="1 1 1 4"
                         BorderBrush="#adadb8">
                         <ContentPresenter
                             x:Name="contentPresenter"
@@ -61,21 +52,12 @@
             </Setter.Value>
         </Setter>
     </Style>
+    
     <Style 
         TargetType="Button"
         x:Key="RedButton"
         BasedOn="{StaticResource BaseButton}">
         <Setter Property="Foreground" Value="#ffffff"/>
-        <Setter Property="Effect">
-            <Setter.Value>
-                <DropShadowEffect
-                    ShadowDepth="1"
-                    Opacity="1"
-                    Direction="230"
-                    BlurRadius="5"
-                    RenderingBias="Quality"/>
-            </Setter.Value>
-        </Setter>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate
@@ -84,7 +66,7 @@
                         Name="RedButtonBorder"
                         CornerRadius="2"
                         Background="#ff0000"
-                        BorderThickness="0 0 0 3"
+                        BorderThickness="1 1 1 4"
                         BorderBrush="#b30000">
                         <ContentPresenter
                             x:Name="contentPresenter"
@@ -109,21 +91,12 @@
             </Setter.Value>
         </Setter>
     </Style>
+    
     <Style 
         TargetType="Button"
         x:Key="GreenButton"
         BasedOn="{StaticResource BaseButton}">
         <Setter Property="Foreground" Value="#ffffff"/>
-        <Setter Property="Effect">
-            <Setter.Value>
-                <DropShadowEffect
-                    ShadowDepth="1"
-                    Opacity="1"
-                    Direction="230"
-                    BlurRadius="5"
-                    RenderingBias="Quality"/>
-            </Setter.Value>
-        </Setter>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate
@@ -131,9 +104,9 @@
                     <Border
                         Name="GreenButtonBorder"
                         CornerRadius="2"
-                        Background="#009933"
-                        BorderThickness="0 0 0 3"
-                        BorderBrush="#006622">
+                        Background="#009900"
+                        BorderThickness="1 1 1 4"
+                        BorderBrush="#006600">
                         <ContentPresenter
                             x:Name="contentPresenter"
                             ContentTemplate="{TemplateBinding ContentTemplate}"

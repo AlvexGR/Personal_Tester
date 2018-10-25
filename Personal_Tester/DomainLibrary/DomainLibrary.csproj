@@ -44,7 +44,6 @@
   <ItemGroup>
     <Compile Include="Enums\MessageButtonEnum.cs" />
     <Compile Include="Enums\MessageIconEnum.cs" />
-    <Compile Include="Enums\MessageResultEnum.cs" />
     <Compile Include="Interfaces\IMessageModel.cs" />
     <Compile Include="Interfaces\IProblemModel.cs" />
     <Compile Include="Interfaces\ITestCaseModel.cs" />

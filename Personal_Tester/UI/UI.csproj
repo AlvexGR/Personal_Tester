@@ -160,7 +160,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\Fonts\" />
-    <Folder Include="Resources\Images\" />
     <Folder Include="ViewModels\Controls\" />
     <Folder Include="ViewModels\TabControls\" />
     <Folder Include="Views\Controls\" />
@@ -189,6 +188,11 @@
       <Project>{3E3E1B4A-4782-447E-BADA-34A2E4B34D86}</Project>
       <Name>DomainLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\MessageResult\Error_0.png" />
+    <Resource Include="Resources\Images\MessageResult\Success_0.png" />
+    <Resource Include="Resources\Images\MessageResult\Warning_0.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
