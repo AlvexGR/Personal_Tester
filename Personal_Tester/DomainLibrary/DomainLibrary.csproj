@@ -42,6 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\MessageButtonEnum.cs" />
+    <Compile Include="Enums\MessageIconEnum.cs" />
+    <Compile Include="Enums\MessageResultEnum.cs" />
+    <Compile Include="Interfaces\IMessageModel.cs" />
+    <Compile Include="Interfaces\IProblemModel.cs" />
+    <Compile Include="Interfaces\ITestCaseModel.cs" />
+    <Compile Include="Models\MessageModel.cs" />
     <Compile Include="Models\ProblemModel.cs" />
     <Compile Include="Models\TestCaseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

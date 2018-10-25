@@ -12,7 +12,7 @@
             <Button
                 Name="whiteButton"
                 Margin="0 20 0 0"
-                Style="{StaticResource WhiteButton}">
+                Style="{StaticResource WhiteButton}" Click="whiteButton_Click">
                 Run
             </Button>
             <Button

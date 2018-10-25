@@ -23,5 +23,10 @@ namespace UI.Views.Windows
         {
             InitializeComponent();
         }
+
+        private void whiteButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
