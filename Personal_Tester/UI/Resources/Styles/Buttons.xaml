@@ -34,9 +34,9 @@
                     TargetType="Button">
                     <Border
                         Name="WhiteButtonBorder"
-                        CornerRadius="2.5"
+                        CornerRadius="2"
                         Background="#efeff1"
-                        BorderThickness="1 1 1 6"
+                        BorderThickness="0 0 0 3"
                         BorderBrush="#adadb8">
                         <ContentPresenter
                             x:Name="contentPresenter"
@@ -82,9 +82,9 @@
                     TargetType="Button">
                     <Border
                         Name="RedButtonBorder"
-                        CornerRadius="2.5"
+                        CornerRadius="2"
                         Background="#ff0000"
-                        BorderThickness="1 1 1 6"
+                        BorderThickness="0 0 0 3"
                         BorderBrush="#b30000">
                         <ContentPresenter
                             x:Name="contentPresenter"
@@ -130,9 +130,9 @@
                     TargetType="Button">
                     <Border
                         Name="GreenButtonBorder"
-                        CornerRadius="2.5"
+                        CornerRadius="2"
                         Background="#009933"
-                        BorderThickness="1 1 1 6"
+                        BorderThickness="0 0 0 3"
                         BorderBrush="#006622">
                         <ContentPresenter
                             x:Name="contentPresenter"
