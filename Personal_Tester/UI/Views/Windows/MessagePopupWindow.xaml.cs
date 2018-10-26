@@ -84,7 +84,7 @@ namespace UI.Views.Windows
         #endregion
 
         #region Events
-        private void messageWindow_Loaded(object sender, RoutedEventArgs e)
+        private void messagePopupWindow_Loaded(object sender, RoutedEventArgs e)
         {
             // Setup view
             if (messageModel.Button == MessagePopupButtonEnum.OkCancel)

@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:UI.Views.Windows"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Height="720" Width="1280">
+        Height="720" Width="1280"
+        MinHeight="720" MinWidth="1280">
     <Grid>
         <StackPanel>
             <Button

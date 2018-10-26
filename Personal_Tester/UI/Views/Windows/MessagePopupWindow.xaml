@@ -1,16 +1,17 @@
-﻿<Window x:Class="UI.Views.Windows.MessageWindow"
+﻿<Window x:Class="UI.Views.Windows.MessagePopupWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI.Views.Windows"
         mc:Ignorable="d"
-        Name="messageWindow"
+        Name="messagePopupWindow"
         WindowStyle="None"
         Height="300" MinHeight="300" MaxHeight="300" 
         Width="450" MinWidth="450" MaxWidth="450"
         WindowStartupLocation="CenterOwner"
-        Loaded="messageWindow_Loaded">
+        FontFamily="{StaticResource K2DRegular}"
+        Loaded="messagePopupWindow_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
@@ -20,7 +21,7 @@
         <TextBlock
             Grid.Row="0"
             Margin="10 0 0 0"
-            FontFamily="{StaticResource K2DRegular}"
+            
             Name="titleTextBlock"
             FontSize="25"/>
         <Grid
@@ -37,7 +38,6 @@
             <TextBlock
                 Grid.Column="1"
                 HorizontalAlignment="Left"
-                FontFamily="{StaticResource K2DRegular}"
                 FontSize="20"
                 TextWrapping="Wrap"
                 VerticalAlignment="Center"
