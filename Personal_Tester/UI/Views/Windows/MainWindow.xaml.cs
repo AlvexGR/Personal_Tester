@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DomainLibrary.Interfaces;
+using DomainLibrary.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -38,6 +40,7 @@ namespace UI.Views.Windows
             messageWindow = new MessageWindow("Hello World", "Nothing", DomainLibrary.Enums.MessageIconEnum.Error, DomainLibrary.Enums.MessageButtonEnum.OkCancel);
             messageWindow.Owner = GetWindow(this);
             messageWindow.ShowDialog();
+
         }
     }
 }

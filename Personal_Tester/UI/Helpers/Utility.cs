@@ -19,6 +19,11 @@ namespace UI.Helpers
         public static bool MessageResult;
 
         /// <summary>
+        /// Current language
+        /// </summary>
+        public static LanguagesEnum language;
+
+        /// <summary>
         /// Get the current application object
         /// </summary>
         public static App GetApp()

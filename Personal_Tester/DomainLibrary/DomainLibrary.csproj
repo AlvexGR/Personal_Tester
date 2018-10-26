@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\LanguagesEnum.cs" />
     <Compile Include="Enums\MessageButtonEnum.cs" />
     <Compile Include="Enums\MessageIconEnum.cs" />
     <Compile Include="Interfaces\IMessageModel.cs" />

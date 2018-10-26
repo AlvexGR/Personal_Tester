@@ -1,5 +1,13 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:UI">
-    
+    <FontFamily
+        x:Key="K2DRegular">
+        pack://application:,,,/Resources/Fonts/#K2D Regular
+    </FontFamily>
+
+    <FontFamily
+        x:Key="K2DBold">
+        pack://application:,,,/Resources/Fonts/#K2D Bold
+    </FontFamily>
 </ResourceDictionary>

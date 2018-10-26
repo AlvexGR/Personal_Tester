@@ -7,6 +7,7 @@ using System.Linq;
 using System.Reactive;
 using System.Text;
 using System.Threading.Tasks;
+using UI.Helpers;
 
 namespace UI.ViewModels.Windows
 {
@@ -23,8 +24,18 @@ namespace UI.ViewModels.Windows
 
         public MessageWindowViewModel()
         {
-            OkCommand = ReactiveCommand.Create(() => { });
-            CancelCommand = ReactiveCommand.Create(() => { });
+            OkCommand = ReactiveCommand.Create(SetMessageResultTrue);
+            CancelCommand = ReactiveCommand.Create(SetMessageResultFalse);
+        }
+
+        private void SetMessageResultTrue()
+        {
+            Utility.MessageResult = true;
+        }
+
+        private void SetMessageResultFalse()
+        {
+            Utility.MessageResult = false;
         }
     }
 }

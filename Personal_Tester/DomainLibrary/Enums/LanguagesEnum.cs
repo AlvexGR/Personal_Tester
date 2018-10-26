@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace DomainLibrary.Enums
 {
-    public enum MessageButtonEnum
+    public enum LanguagesEnum
     {
         /// <summary>
-        /// Just ok button
+        /// The English language
         /// </summary>
-        Ok = 0,
+        English = 0,
 
         /// <summary>
-        /// Ok button and Cancel button
+        /// Tiếng Việt
         /// </summary>
-        OkCancel
+        Vietnamese
     }
 }

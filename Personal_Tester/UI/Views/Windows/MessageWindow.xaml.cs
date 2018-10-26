@@ -70,16 +70,14 @@ namespace UI.Views.Windows
         private void Binding(Action<IDisposable> d)
         {
             d(this.BindCommand(ViewModel, vm => vm.OkCommand, v => v.okButton));
-            d(ViewModel.OkCommand.Subscribe(x => 
+            d(ViewModel.OkCommand.Subscribe(x =>
             {
-                Utility.MessageResult = true;
                 Close();
             }));
 
             d(this.BindCommand(ViewModel, vm => vm.CancelCommand, v => v.cancelButton));
-            d(ViewModel.CancelCommand.Subscribe(x => 
+            d(ViewModel.CancelCommand.Subscribe(x =>
             {
-                Utility.MessageResult = false;
                 Close();
             }));
         }
@@ -96,6 +94,13 @@ namespace UI.Views.Windows
             messageTextBlock.Text = messageModel.Message;
             titleTextBlock.Text = messageModel.Title;
             iconMessageImage.Source = new BitmapImage(new Uri(imageSource[Convert.ToInt32(messageModel.Icon)], UriKind.Absolute));
+        }
+        #endregion
+
+        #region Methods
+        private void ConvertLanguage()
+        {
+
         }
         #endregion
     }
