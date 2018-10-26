@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DomainLibrary.Enums
 {
-    public enum MessageIconEnum
+    public enum MessagePopupIconEnum
     {
         /// <summary>
         /// Warning icon

@@ -13,26 +13,39 @@ namespace UI.ViewModels.Windows
 {
     public interface IMessageWindowViewModel
     {
+        /// <summary>
+        /// When user click Ok button
+        /// </summary>
         ReactiveCommand<Unit, Unit> OkCommand { get; }
+
+        /// <summary>
+        /// When user click Cancel button
+        /// </summary>
         ReactiveCommand<Unit, Unit> CancelCommand { get; }
     }
 
-    public class MessageWindowViewModel : ReactiveObject, IMessageWindowViewModel
+    public class MessagePopupWindowViewModel : ReactiveObject, IMessageWindowViewModel
     {
         public ReactiveCommand<Unit, Unit> OkCommand { get; }
         public ReactiveCommand<Unit, Unit> CancelCommand { get; }
 
-        public MessageWindowViewModel()
+        public MessagePopupWindowViewModel()
         {
             OkCommand = ReactiveCommand.Create(SetMessageResultTrue);
             CancelCommand = ReactiveCommand.Create(SetMessageResultFalse);
         }
 
+        /// <summary>
+        /// Set result to true
+        /// </summary>
         private void SetMessageResultTrue()
         {
             Utility.MessageResult = true;
         }
 
+        /// <summary>
+        /// Set result to false
+        /// </summary>
         private void SetMessageResultFalse()
         {
             Utility.MessageResult = false;

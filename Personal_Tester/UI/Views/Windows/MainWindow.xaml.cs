@@ -29,15 +29,15 @@ namespace UI.Views.Windows
 
         private void whiteButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageWindow messageWindow = new MessageWindow("Save successfully. Please restart the application for some settings to apply", "Save setting", DomainLibrary.Enums.MessageIconEnum.Success, DomainLibrary.Enums.MessageButtonEnum.OkCancel);
+            MessagePopupWindow messageWindow = new MessagePopupWindow("Save successfully. Please restart the application for some settings to apply", "Save setting", DomainLibrary.Enums.MessagePopupIconEnum.Success, DomainLibrary.Enums.MessagePopupButtonEnum.OkCancel);
             messageWindow.Owner = GetWindow(this);
             messageWindow.ShowDialog();
 
-            messageWindow = new MessageWindow("Hello World", "Nothing", DomainLibrary.Enums.MessageIconEnum.Warning, DomainLibrary.Enums.MessageButtonEnum.Ok);
+            messageWindow = new MessagePopupWindow("Hello World", "Nothing", DomainLibrary.Enums.MessagePopupIconEnum.Warning, DomainLibrary.Enums.MessagePopupButtonEnum.Ok);
             messageWindow.Owner = GetWindow(this);
             messageWindow.ShowDialog();
 
-            messageWindow = new MessageWindow("Hello World", "Nothing", DomainLibrary.Enums.MessageIconEnum.Error, DomainLibrary.Enums.MessageButtonEnum.OkCancel);
+            messageWindow = new MessagePopupWindow("Hello World", "Nothing", DomainLibrary.Enums.MessagePopupIconEnum.Error, DomainLibrary.Enums.MessagePopupButtonEnum.OkCancel);
             messageWindow.Owner = GetWindow(this);
             messageWindow.ShowDialog();
 

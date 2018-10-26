@@ -43,12 +43,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\LanguagesEnum.cs" />
-    <Compile Include="Enums\MessageButtonEnum.cs" />
-    <Compile Include="Enums\MessageIconEnum.cs" />
-    <Compile Include="Interfaces\IMessageModel.cs" />
+    <Compile Include="Enums\MessagePopupButtonEnum.cs" />
+    <Compile Include="Enums\MessagePopupIconEnum.cs" />
+    <Compile Include="Interfaces\IMessagePopupModel.cs" />
     <Compile Include="Interfaces\IProblemModel.cs" />
     <Compile Include="Interfaces\ITestCaseModel.cs" />
-    <Compile Include="Models\MessageModel.cs" />
+    <Compile Include="Models\MessagePopupModel.cs" />
     <Compile Include="Models\ProblemModel.cs" />
     <Compile Include="Models\TestCaseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DomainLibrary.Interfaces
 {
-    public interface IMessageModel
+    public interface IMessagePopupModel
     {
         /// <summary>
         /// Content of the message will be displayed to the user
@@ -22,11 +22,11 @@ namespace DomainLibrary.Interfaces
         /// <summary>
         /// Icon type of the Message Window
         /// </summary>
-        MessageIconEnum Icon { set; get; }
+        MessagePopupIconEnum Icon { set; get; }
 
         /// <summary>
         /// Button type of the Message Window
         /// </summary>
-        MessageButtonEnum Button { set; get; }
+        MessagePopupButtonEnum Button { set; get; }
     }
 }
