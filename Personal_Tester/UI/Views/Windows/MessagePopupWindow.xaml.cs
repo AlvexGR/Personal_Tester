@@ -24,10 +24,10 @@ namespace UI.Views.Windows
     /// <summary>
     /// Interaction logic for MessageWindow.xaml
     /// </summary>
-    public partial class MessageWindow : Window, IViewFor<IMessageWindowViewModel>
+    public partial class MessagePopupWindow : Window, IViewFor<IMessageWindowViewModel>
     {
         #region Properties
-        public static readonly DependencyProperty ViewModelProperty = DependencyProperty.Register(nameof(ViewModel), typeof(IMessageWindowViewModel), typeof(MessageWindow));
+        public static readonly DependencyProperty ViewModelProperty = DependencyProperty.Register(nameof(ViewModel), typeof(IMessageWindowViewModel), typeof(MessagePopupWindow));
         public IMessageWindowViewModel ViewModel
         {
             get => GetValue(ViewModelProperty) as IMessageWindowViewModel;
@@ -43,15 +43,15 @@ namespace UI.Views.Windows
         // List of icon
         private List<string> imageSource;
 
-        private IMessageModel messageModel;
+        private IMessagePopupModel messageModel;
         #endregion
 
         #region Constructor
-        public MessageWindow(string message, string title, MessageIconEnum icon, MessageButtonEnum button)
+        public MessagePopupWindow(string message, string title, MessagePopupIconEnum icon, MessagePopupButtonEnum button)
         {
             InitializeComponent();
-            messageModel = new MessageModel(message, title, icon, button);
-            ViewModel = new MessageWindowViewModel();
+            messageModel = new MessagePopupModel(message, title, icon, button);
+            ViewModel = new MessagePopupWindowViewModel();
             imageSource = new List<string>()
             {
                 "pack://application:,,,/Resources/Images/MessageResult/Warning_0.png",
@@ -84,10 +84,10 @@ namespace UI.Views.Windows
         #endregion
 
         #region Events
-        private void messageWindow_Loaded(object sender, RoutedEventArgs e)
+        private void messagePopupWindow_Loaded(object sender, RoutedEventArgs e)
         {
             // Setup view
-            if (messageModel.Button == MessageButtonEnum.OkCancel)
+            if (messageModel.Button == MessagePopupButtonEnum.OkCancel)
             {
                 cancelButton.Visibility = Visibility.Visible;
             }

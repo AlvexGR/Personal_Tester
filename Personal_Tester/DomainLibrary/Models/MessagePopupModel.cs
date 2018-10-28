@@ -8,19 +8,19 @@ using System.Threading.Tasks;
 
 namespace DomainLibrary.Models
 {
-    public class MessageModel : IMessageModel
+    public class MessagePopupModel : IMessagePopupModel
     {
         public string Message { get; set; }
         public string Title { get; set; }
-        public MessageIconEnum Icon { set; get; }
-        public MessageButtonEnum Button { set; get; }
+        public MessagePopupIconEnum Icon { set; get; }
+        public MessagePopupButtonEnum Button { set; get; }
 
-        public MessageModel()
+        public MessagePopupModel()
         {
 
         }
 
-        public MessageModel(string message, string title, MessageIconEnum icon, MessageButtonEnum button)
+        public MessagePopupModel(string message, string title, MessagePopupIconEnum icon, MessagePopupButtonEnum button)
         {
             Message = message;
             Title = title;

@@ -11,8 +11,12 @@ using UI.Views.Windows;
 
 namespace UI.Helpers
 {
+    /// <summary>
+    /// Store utility global properties and methods
+    /// </summary>
     public static class Utility
     {
+        #region Properties
         /// <summary>
         /// Result from the MessageWindow that user chose
         /// </summary>
@@ -22,7 +26,9 @@ namespace UI.Helpers
         /// Current language
         /// </summary>
         public static LanguagesEnum language;
+        #endregion
 
+        #region Methods
         /// <summary>
         /// Get the current application object
         /// </summary>
@@ -30,5 +36,6 @@ namespace UI.Helpers
         {
             return (App)Application.Current;
         }
+        #endregion
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DomainLibrary.Enums
 {
-    public enum MessageButtonEnum
+    public enum MessagePopupButtonEnum
     {
         /// <summary>
         /// Just ok button
