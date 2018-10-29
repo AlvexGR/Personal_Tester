@@ -12,7 +12,7 @@ namespace UI.ViewModels.Windows
 
     }
 
-    public class MainWindowViewModel : ReactiveObject
+    public class MainWindowViewModel : ReactiveObject, IMainWindowViewModel
     {
         public MainWindowViewModel()
         {

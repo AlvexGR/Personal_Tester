@@ -10,7 +10,6 @@
         Height="300" MinHeight="300" MaxHeight="300" 
         Width="450" MinWidth="450" MaxWidth="450"
         WindowStartupLocation="CenterOwner"
-        FontFamily="{StaticResource K2DRegular}"
         Loaded="messagePopupWindow_Loaded">
     <Grid>
         <Grid.RowDefinitions>
@@ -21,8 +20,8 @@
         <TextBlock
             Grid.Row="0"
             Margin="10 0 0 0"
-            
             Name="titleTextBlock"
+            Style="{StaticResource BaseRegularTextBlock}"
             FontSize="25"/>
         <Grid
             Grid.Row="1">
@@ -37,11 +36,8 @@
                 Width="50"/>
             <TextBlock
                 Grid.Column="1"
-                HorizontalAlignment="Left"
-                FontSize="20"
-                TextWrapping="Wrap"
-                VerticalAlignment="Center"
-                Name="messageTextBlock"/>
+                Name="messageTextBlock"
+                Style="{StaticResource MessagePopupTextBlock}"/>
         </Grid>
         <Grid
             Grid.Row="2">
@@ -56,7 +52,9 @@
                 Height="50"
                 Width="70"
                 Style="{StaticResource GreenButton}">
-                Ok
+                <TextBlock
+                    Style="{StaticResource ButtonTextBlock}"
+                    Text="Ok"/>
             </Button>
             <Button
                 Grid.Column="2"
@@ -65,7 +63,9 @@
                 Height="50"
                 Width="70"
                 Style="{StaticResource WhiteButton}">
-                Cancel
+                <TextBlock
+                    Style="{StaticResource ButtonTextBlock}"
+                    Text="Cancel"/>
             </Button>
         </Grid>
     </Grid>

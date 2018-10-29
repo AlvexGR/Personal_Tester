@@ -22,10 +22,12 @@ namespace UI.Views.Windows
     /// </summary>
     public partial class MainWindow : Window
     {
+        #region Constructor
         public MainWindow()
         {
             InitializeComponent();
         }
+        #endregion
 
         private void whiteButton_Click(object sender, RoutedEventArgs e)
         {
@@ -42,5 +44,13 @@ namespace UI.Views.Windows
             messageWindow.ShowDialog();
 
         }
+
+        #region Events
+        private void mainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            // setup view
+            
+        }
+        #endregion
     }
 }

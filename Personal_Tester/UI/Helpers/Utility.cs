@@ -25,7 +25,7 @@ namespace UI.Helpers
         /// <summary>
         /// Current language
         /// </summary>
-        public static LanguagesEnum language;
+        public static LanguageEnum language;
         #endregion
 
         #region Methods

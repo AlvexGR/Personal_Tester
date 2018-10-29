@@ -4,30 +4,29 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI.Views.Windows"
+        xmlns:controls="clr-namespace:UI.Views.Controls"
         mc:Ignorable="d"
+        Name="mainWindow"
         WindowStartupLocation="CenterScreen"
         Height="720" Width="1280"
-        MinHeight="720" MinWidth="1280">
+        MinHeight="720" MinWidth="1280"
+        Loaded="mainWindow_Loaded">
     <Grid>
-        <StackPanel>
-            <Button
-                Name="whiteButton"
-                Margin="0 20 0 0"
-                Style="{StaticResource WhiteButton}" Click="whiteButton_Click">
-                Run
-            </Button>
-            <Button
-                Name="redButton"
-                Margin="0 20 0 0"
-                Style="{StaticResource RedButton}">
-                Delete
-            </Button>
-            <Button
-                Name="greenButton"
-                Margin="0 20 0 0"
-                Style="{StaticResource GreenButton}">
-                Add
-            </Button>
-        </StackPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <controls:SideBarControl
+            Grid.Column="0"
+            x:Name="sideBarControl"/>
+        <Button
+            Grid.Column="1"
+            Name="whiteButton"
+            Style="{StaticResource WhiteButton}"
+            Click="whiteButton_Click">
+            <TextBlock
+                Text="Click me"
+                Style="{StaticResource ButtonTextBlock}"/>
+        </Button>
     </Grid>
 </Window>

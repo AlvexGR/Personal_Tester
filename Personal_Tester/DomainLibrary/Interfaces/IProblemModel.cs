@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DomainLibrary.Interfaces
 {
-    public interface IProblemModel
+    public interface IProblemModel : IBaseModel
     {
     }
 }

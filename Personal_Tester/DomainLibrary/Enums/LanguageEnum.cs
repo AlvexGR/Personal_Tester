@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace DomainLibrary.Enums
 {
-    public enum LanguagesEnum
+    public enum LanguageEnum
     {
         /// <summary>
-        /// The English language
+        /// English
         /// </summary>
         English = 0,
 

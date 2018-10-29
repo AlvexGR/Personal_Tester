@@ -27,7 +27,8 @@ namespace UI.Views.Windows
     public partial class MessagePopupWindow : Window, IViewFor<IMessageWindowViewModel>
     {
         #region Properties
-        public static readonly DependencyProperty ViewModelProperty = DependencyProperty.Register(nameof(ViewModel), typeof(IMessageWindowViewModel), typeof(MessagePopupWindow));
+        public static readonly DependencyProperty ViewModelProperty = 
+            DependencyProperty.Register(nameof(ViewModel), typeof(IMessageWindowViewModel), typeof(MessagePopupWindow));
         public IMessageWindowViewModel ViewModel
         {
             get => GetValue(ViewModelProperty) as IMessageWindowViewModel;
@@ -94,13 +95,6 @@ namespace UI.Views.Windows
             messageTextBlock.Text = messageModel.Message;
             titleTextBlock.Text = messageModel.Title;
             iconMessageImage.Source = new BitmapImage(new Uri(imageSource[Convert.ToInt32(messageModel.Icon)], UriKind.Absolute));
-        }
-        #endregion
-
-        #region Methods
-        private void ConvertLanguage()
-        {
-
         }
         #endregion
     }

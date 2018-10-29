@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DomainLibrary.Interfaces
 {
-    public interface IMessagePopupModel
+    public interface IMessagePopupModel : IBaseModel
     {
         /// <summary>
         /// Content of the message will be displayed to the user

@@ -120,9 +120,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ViewModels\Controls\SideBarControlViewModel.cs" />
     <Compile Include="ViewModels\IBaseViewModel.cs" />
     <Compile Include="ViewModels\Windows\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\Windows\MessagePopupWindowViewModel.cs" />
+    <Compile Include="Views\Controls\SideBarControl.xaml.cs">
+      <DependentUpon>SideBarControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -175,17 +179,23 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ViewModels\Controls\" />
     <Folder Include="ViewModels\TabControls\" />
-    <Folder Include="Views\Controls\" />
     <Folder Include="Views\TabControls\" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Resources\Styles\Buttons.xaml">
+    <Page Include="Resources\Styles\ButtonStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Resources\Styles\Fonts.xaml">
+    <Page Include="Resources\Styles\FontStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Styles\TextBlockStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\SideBarControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -211,6 +221,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Fonts\OFL.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\SideBar\CustomTest_0.png" />
+    <Resource Include="Resources\Images\SideBar\Settings_0.png" />
+    <Resource Include="Resources\Images\SideBar\SolutionTest_0.png" />
+    <Resource Include="Resources\Images\SideBar\TreeCode_0.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

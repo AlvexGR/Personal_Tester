@@ -42,9 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enums\LanguagesEnum.cs" />
+    <Compile Include="Enums\LanguageEnum.cs" />
     <Compile Include="Enums\MessagePopupButtonEnum.cs" />
     <Compile Include="Enums\MessagePopupIconEnum.cs" />
+    <Compile Include="Interfaces\IBaseModel.cs" />
     <Compile Include="Interfaces\IMessagePopupModel.cs" />
     <Compile Include="Interfaces\IProblemModel.cs" />
     <Compile Include="Interfaces\ITestCaseModel.cs" />

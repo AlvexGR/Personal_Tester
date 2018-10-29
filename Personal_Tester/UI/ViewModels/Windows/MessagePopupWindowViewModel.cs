@@ -11,7 +11,7 @@ using UI.Helpers;
 
 namespace UI.ViewModels.Windows
 {
-    public interface IMessageWindowViewModel
+    public interface IMessageWindowViewModel : IBaseViewModel
     {
         /// <summary>
         /// When user click Ok button
