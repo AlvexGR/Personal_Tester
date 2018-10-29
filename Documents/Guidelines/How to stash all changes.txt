@@ -1,5 +1,7 @@
 If you want to change branch:
-- From you branch, press Stash
+- From you branch
+- Stage all your changes
+- Stash, and note something
 - Go to new branch
 - Apply the saved Stash
 - Delete it if you want
