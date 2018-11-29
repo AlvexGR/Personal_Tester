@@ -1,4 +1,5 @@
-﻿using DomainLibrary.Enums;
+﻿using Core.ViewModels.Windows;
+using DomainLibrary.Enums;
 using DomainLibrary.Interfaces;
 using DomainLibrary.Models;
 using ReactiveUI;
@@ -16,10 +17,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using UI.Helpers;
-using UI.ViewModels.Windows;
+using UIApplication.Helpers;
 
-namespace UI.Views.Windows
+namespace UIApplication.Views.Windows
 {
     /// <summary>
     /// Interaction logic for MessageWindow.xaml

@@ -7,9 +7,8 @@ using System.Linq;
 using System.Reactive;
 using System.Text;
 using System.Threading.Tasks;
-using UI.Helpers;
 
-namespace UI.ViewModels.Windows
+namespace Core.ViewModels.Windows
 {
     public interface IMessageWindowViewModel : IBaseViewModel
     {
@@ -26,29 +25,21 @@ namespace UI.ViewModels.Windows
 
     public class MessagePopupWindowViewModel : ReactiveObject, IMessageWindowViewModel
     {
-        public ReactiveCommand<Unit, Unit> OkCommand { get; }
-        public ReactiveCommand<Unit, Unit> CancelCommand { get; }
 
         public MessagePopupWindowViewModel()
         {
-            OkCommand = ReactiveCommand.Create(SetMessageResultTrue);
-            CancelCommand = ReactiveCommand.Create(SetMessageResultFalse);
+            _okCommand = ReactiveCommand.Create(() => { });
+            _cancelCommand = ReactiveCommand.Create(() => { });
         }
 
-        /// <summary>
-        /// Set result to true
-        /// </summary>
-        private void SetMessageResultTrue()
-        {
-            Utility.MessageResult = true;
-        }
+        #region Properties
 
-        /// <summary>
-        /// Set result to false
-        /// </summary>
-        private void SetMessageResultFalse()
-        {
-            Utility.MessageResult = false;
-        }
+        private readonly ReactiveCommand<Unit, Unit> _okCommand;
+        ReactiveCommand<Unit, Unit> IMessageWindowViewModel.OkCommand => _okCommand;
+
+        private readonly ReactiveCommand<Unit, Unit> _cancelCommand;
+        ReactiveCommand<Unit, Unit> IMessageWindowViewModel.CancelCommand => _cancelCommand;
+
+        #endregion
     }
 }

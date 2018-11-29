@@ -13,9 +13,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using UI.Helpers;
+using UIApplication.Helpers;
 using DomainLibrary;
-namespace UI.Views.Windows
+namespace UIApplication.Views.Windows
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -31,8 +31,10 @@ namespace UI.Views.Windows
 
         private void whiteButton_Click(object sender, RoutedEventArgs e)
         {
-            MessagePopupWindow messageWindow = new MessagePopupWindow("Save successfully. Please restart the application for some settings to apply", "Save setting", DomainLibrary.Enums.MessagePopupIconEnum.Success, DomainLibrary.Enums.MessagePopupButtonEnum.OkCancel);
-            messageWindow.Owner = GetWindow(this);
+            MessagePopupWindow messageWindow = new MessagePopupWindow("Save successfully. Please restart the application for some settings to apply", "Save setting", DomainLibrary.Enums.MessagePopupIconEnum.Success, DomainLibrary.Enums.MessagePopupButtonEnum.OkCancel)
+            {
+                Owner = GetWindow(this)
+            };
             messageWindow.ShowDialog();
 
             messageWindow = new MessagePopupWindow("Hello World", "Nothing", DomainLibrary.Enums.MessagePopupIconEnum.Warning, DomainLibrary.Enums.MessagePopupButtonEnum.Ok);

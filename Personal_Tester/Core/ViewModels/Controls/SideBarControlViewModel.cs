@@ -6,7 +6,7 @@ using System.Reactive;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UI.ViewModels.Controls
+namespace Core.ViewModels.Controls
 {
     public interface ISideBarControlViewModel : IBaseViewModel
     {

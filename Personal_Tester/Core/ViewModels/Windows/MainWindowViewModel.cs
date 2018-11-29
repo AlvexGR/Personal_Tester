@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UI.ViewModels.Windows
+namespace Core.ViewModels.Windows
 {
     public interface IMainWindowViewModel : IBaseViewModel
     {

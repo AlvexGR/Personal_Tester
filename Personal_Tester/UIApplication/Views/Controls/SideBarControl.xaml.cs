@@ -1,4 +1,5 @@
-﻿using ReactiveUI;
+﻿using Core.ViewModels.Controls;
+using ReactiveUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using UI.ViewModels.Controls;
 
-namespace UI.Views.Controls
+namespace UIApplication.Views.Controls
 {
     /// <summary>
     /// Interaction logic for SideBarControl.xaml
