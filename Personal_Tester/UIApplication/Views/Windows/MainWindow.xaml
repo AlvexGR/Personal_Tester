@@ -8,8 +8,10 @@
         mc:Ignorable="d"
         Name="mainWindow"
         WindowStartupLocation="CenterScreen"
-        Height="720" Width="1280"
-        MinHeight="720" MinWidth="1280"
+        Height="720"
+        Width="1280"
+        MinHeight="720"
+        MinWidth="1280"
         Loaded="mainWindow_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>

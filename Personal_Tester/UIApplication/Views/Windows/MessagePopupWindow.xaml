@@ -7,11 +7,18 @@
         mc:Ignorable="d"
         Name="messagePopupWindow"
         WindowStyle="None"
-        Height="300" MinHeight="300" MaxHeight="300" 
-        Width="450" MinWidth="450" MaxWidth="450"
+        Height="720"
+        Width="1280"
         WindowStartupLocation="CenterOwner"
-        Loaded="messagePopupWindow_Loaded">
-    <Grid>
+        Loaded="messagePopupWindow_Loaded"
+        AllowsTransparency="True">
+    <Window.Background>
+        <SolidColorBrush Opacity="0.6" Color="Black" />
+    </Window.Background>
+    <Grid
+        Height="300"
+        Width="450"
+        Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="8*"/>
