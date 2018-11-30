@@ -15,20 +15,11 @@
         Loaded="mainWindow_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="250"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <controls:SideBarControl
             Grid.Column="0"
             x:Name="sideBarControl"/>
-        <Button
-            Grid.Column="1"
-            Name="whiteButton"
-            Style="{StaticResource WhiteButton}"
-            Click="whiteButton_Click">
-            <TextBlock
-                Text="Click me"
-                Style="{StaticResource ButtonTextBlock}"/>
-        </Button>
     </Grid>
 </Window>

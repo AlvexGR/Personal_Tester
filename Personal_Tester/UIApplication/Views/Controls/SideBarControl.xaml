@@ -7,52 +7,117 @@
              Name="sideBarControl"
              mc:Ignorable="d" 
              d:DesignHeight="720" 
-             d:DesignWidth="400">
+             d:DesignWidth="250">
     <ScrollViewer
         VerticalScrollBarVisibility="Auto">
-        <Grid>
+        <Grid
+            Background="#f2f2f2">
             <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="100"/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="75"/>
             </Grid.RowDefinitions>
-            <Button
-                Grid.Row="0"
-                Name="customTestButton"
-                Style="{StaticResource TransparentSideBarButton}">
-                <TextBlock
-                    Name="customTestTextBlock"
-                    Style="{StaticResource BarItemTextBlock}"
-                    Text="Custom Test"/>
-            </Button>
-            <Button
-                Grid.Row="1"
-                Name="solutionTestButton"
-                Style="{StaticResource TransparentSideBarButton}">
-                <TextBlock
-                    Name="solutionTestTextBlock"
-                    Style="{StaticResource BarItemTextBlock}"
-                    Text="Solution Test"/>
-            </Button>
-            <Button
-                Grid.Row="2"
-                Name="treeCodeButton"
-                Style="{StaticResource TransparentSideBarButton}">
-                <TextBlock
-                    Name="treeCodeTextBlock"
-                    Style="{StaticResource BarItemTextBlock}"
-                    Text="Tree Code"/>
-            </Button>
-            <Button
-                Grid.Row="3"
-                Name="settingButton"
-                Style="{StaticResource TransparentSideBarButton}">
-                <TextBlock
-                    Name="settingTextBlock"
-                    Style="{StaticResource BarItemTextBlock}"
-                    Text="Settings"/>
-            </Button>
+            <Border
+                Grid.Row="0">
+                <Button
+                    Name="customTestButton"
+                    Style="{DynamicResource SideBarNotSelectedButton}">
+                    <Grid
+                        Margin="30 0 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            Grid.Column="0"
+                            Source="pack://application:,,,/Resources/Images/SideBar/CustomTest_0.png"
+                            Height="30"
+                            Width="30"/>
+                        <TextBlock
+                            Grid.Column="1"
+                            Name="customTestTextBlock"
+                            Style="{StaticResource BarItemTextBlock}"
+                            Text="Custom Test"
+                            Margin="20 0 0 0"/>
+                    </Grid>
+                </Button>
+            </Border>
+            <Border
+                Grid.Row="1">
+                <Button
+                    Name="solutionTestButton"
+                    Style="{DynamicResource SideBarNotSelectedButton}">
+                    <Grid
+                        Margin="30 0 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            Grid.Column="0"
+                            Source="pack://application:,,,/Resources/Images/SideBar/SolutionTest_0.png"
+                            Height="30"
+                            Width="30"/>
+                        <TextBlock
+                            Grid.Column="1"
+                            Name="solutionTestTextBlock"
+                            Style="{StaticResource BarItemTextBlock}"
+                            Text="Solution Test"
+                            Margin="20 0 0 0"/>
+                    </Grid>
+                </Button>
+            </Border>
+            <Border
+                Grid.Row="2">
+                <Button
+                    Name="treeCodeButton"
+                    Style="{DynamicResource SideBarNotSelectedButton}">
+                    <Grid
+                        Margin="30 0 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            Grid.Column="0"
+                            Source="pack://application:,,,/Resources/Images/SideBar/TreeCode_0.png"
+                            Height="30"
+                            Width="30"/>
+                        <TextBlock
+                            Grid.Column="1"
+                            Name="treeCodeTextBlock"
+                            Style="{StaticResource BarItemTextBlock}"
+                            Text="Tree Code"
+                            Margin="20 0 0 0"/>
+                    </Grid>
+                </Button>
+            </Border>
+            <Border
+                Grid.Row="3">
+                <Button
+                    Name="settingButton"
+                    Style="{DynamicResource SideBarNotSelectedButton}">
+                    <Grid
+                        Margin="30 0 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            Grid.Column="0"
+                            Source="pack://application:,,,/Resources/Images/SideBar/Settings_0.png"
+                            Height="30"
+                            Width="30"/>
+                        <TextBlock
+                            Grid.Column="1"
+                            Name="settingTextBlock"
+                            Style="{StaticResource BarItemTextBlock}"
+                            Text="Settings"
+                            Margin="20 0 0 0"/>
+                    </Grid>
+                </Button>
+            </Border>
         </Grid>
     </ScrollViewer>
 </UserControl>

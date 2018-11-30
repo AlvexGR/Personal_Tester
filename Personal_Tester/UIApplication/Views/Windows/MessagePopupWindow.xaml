@@ -10,7 +10,6 @@
         Height="720"
         Width="1280"
         WindowStartupLocation="CenterOwner"
-        Loaded="messagePopupWindow_Loaded"
         AllowsTransparency="True">
     <Window.Background>
         <SolidColorBrush Opacity="0.6" Color="Black" />

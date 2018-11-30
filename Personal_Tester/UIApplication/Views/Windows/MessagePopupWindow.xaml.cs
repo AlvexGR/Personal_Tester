@@ -5,19 +5,8 @@ using DomainLibrary.Models;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reactive.Disposables;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using UIApplication.Helpers;
 
 namespace UIApplication.Views.Windows
 {
@@ -51,6 +40,7 @@ namespace UIApplication.Views.Windows
         public MessagePopupWindow(string message, string title, MessagePopupIconEnum icon, MessagePopupButtonEnum button)
         {
             InitializeComponent();
+            SetupView();
             messageModel = new MessagePopupModel(message, title, icon, button);
             ViewModel = new MessagePopupWindowViewModel();
             imageSource = new List<string>()
@@ -83,11 +73,9 @@ namespace UIApplication.Views.Windows
             }));
         }
         #endregion
-
-        #region Events
-        private void messagePopupWindow_Loaded(object sender, RoutedEventArgs e)
+        
+        private void SetupView()
         {
-            // Setup view
             if (messageModel.Button == MessagePopupButtonEnum.OkCancel)
             {
                 cancelButton.Visibility = Visibility.Visible;
@@ -96,6 +84,5 @@ namespace UIApplication.Views.Windows
             titleTextBlock.Text = messageModel.Title;
             iconMessageImage.Source = new BitmapImage(new Uri(imageSource[Convert.ToInt32(messageModel.Icon)], UriKind.Absolute));
         }
-        #endregion
     }
 }

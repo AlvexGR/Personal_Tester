@@ -99,14 +99,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\Controls\CustomTestControlViewModel.cs" />
+    <Compile Include="ViewModels\Controls\SettingControlViewModel.cs" />
     <Compile Include="ViewModels\Controls\SideBarControlViewModel.cs" />
+    <Compile Include="ViewModels\Controls\SolutionTestControlViewModel.cs" />
     <Compile Include="ViewModels\IBaseViewModel.cs" />
     <Compile Include="ViewModels\Windows\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\Windows\MessagePopupWindowViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Handlers\" />
-    <Folder Include="ViewModels\TabControls\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccessLibrary\DataAccessLibrary.csproj">

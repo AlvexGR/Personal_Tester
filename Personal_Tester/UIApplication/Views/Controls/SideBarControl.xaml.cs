@@ -57,27 +57,55 @@ namespace UIApplication.Views.Controls
             d(this.BindCommand(ViewModel, vm => vm.CustomTestCommand, v => v.customTestButton));
             d(ViewModel.CustomTestCommand.Subscribe(x =>
             {
-                // Later
+                // set style
+                ChangeToNotSelected();
+                ChangeToSelected(customTestButton);
             }));
 
             d(this.BindCommand(ViewModel, vm => vm.SolutionTestCommand, v => v.solutionTestButton));
             d(ViewModel.SolutionTestCommand.Subscribe(x =>
             {
-                // Later
+                // set style
+                ChangeToNotSelected();
+                ChangeToSelected(solutionTestButton);
             }));
 
             d(this.BindCommand(ViewModel, vm => vm.TreeCodeCommand, v => v.treeCodeButton));
             d(ViewModel.TreeCodeCommand.Subscribe(x =>
             {
-                // Later
+                // set style
+                ChangeToNotSelected();
+                ChangeToSelected(treeCodeButton);
             }));
 
             d(this.BindCommand(ViewModel, vm => vm.SettingCommand, v => v.settingButton));
             d(ViewModel.SettingCommand.Subscribe(x =>
             {
-                // Later
+                // set style
+                ChangeToNotSelected();
+                ChangeToSelected(settingButton);
             }));
         }
         #endregion
+
+        /// <summary>
+        /// Reset when all buttons' style to NotSelectedButton
+        /// </summary>
+        private void ChangeToNotSelected()
+        {
+            customTestButton.Style = Application.Current.Resources["SideBarNotSelectedButton"] as Style;
+            solutionTestButton.Style = Application.Current.Resources["SideBarNotSelectedButton"] as Style;
+            treeCodeButton.Style = Application.Current.Resources["SideBarNotSelectedButton"] as Style;
+            settingButton.Style = Application.Current.Resources["SideBarNotSelectedButton"] as Style;
+        }
+
+        /// <summary>
+        /// Set button's style to SelectedButton
+        /// </summary>
+        /// <param name="button"></param>
+        private void ChangeToSelected(Button button)
+        {
+            button.Style = Application.Current.Resources["SideBarSelectedButton"] as Style;
+        }
     }
 }

@@ -1,5 +1,5 @@
-﻿using DomainLibrary.Interfaces;
-using DomainLibrary.Models;
+﻿using Core.ViewModels.Controls;
+using ReactiveUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,42 +12,41 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using UIApplication.Helpers;
-using DomainLibrary;
-using Core.ViewModels.Windows;
-using ReactiveUI;
 
-namespace UIApplication.Views.Windows
+namespace UIApplication.Views.Controls
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for SolutionTestControl.xaml
     /// </summary>
-    public partial class MainWindow : Window, IViewFor<IMainWindowViewModel>
+    public partial class SolutionTestControl : UserControl, IViewFor<ISolutionTestControlViewModel>
     {
+
         #region Constructor
-        public MainWindow()
+
+        public SolutionTestControl()
         {
             InitializeComponent();
         }
-        #endregion
 
+        #endregion
 
         #region Properties
 
         public static readonly DependencyProperty ViewModelProperty =
-            DependencyProperty.Register(nameof(ViewModel), typeof(IMainWindowViewModel), typeof(MainWindow));
+            DependencyProperty.Register(nameof(ViewModel), typeof(ISolutionTestControlViewModel), typeof(SolutionTestControl));
 
-        public IMainWindowViewModel ViewModel
+        public ISolutionTestControlViewModel ViewModel
         {
-            get => GetValue(ViewModelProperty) as IMainWindowViewModel;
+            get => GetValue(ViewModelProperty) as ISolutionTestControlViewModel;
             set => SetValue(ViewModelProperty, value);
         }
 
         object IViewFor.ViewModel
         {
             get => ViewModel;
-            set => ViewModel = value as IMainWindowViewModel;
+            set => ViewModel = value as ISolutionTestControlViewModel;
         }
 
         #endregion
