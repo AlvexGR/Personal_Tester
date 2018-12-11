@@ -11,8 +11,7 @@
         Height="720"
         Width="1280"
         MinHeight="720"
-        MinWidth="1280"
-        Loaded="mainWindow_Loaded">
+        MinWidth="1280">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>
@@ -21,5 +20,7 @@
         <controls:SideBarControl
             Grid.Column="0"
             x:Name="sideBarControl"/>
+        <controls:TestCaseControl
+            Grid.Column="1"/>
     </Grid>
 </Window>

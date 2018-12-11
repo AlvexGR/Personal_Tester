@@ -17,6 +17,7 @@ using UIApplication.Helpers;
 using DomainLibrary;
 using Core.ViewModels.Windows;
 using ReactiveUI;
+using UIApplication.Views.Controls;
 
 namespace UIApplication.Views.Windows
 {
@@ -29,6 +30,8 @@ namespace UIApplication.Views.Windows
         public MainWindow()
         {
             InitializeComponent();
+            TestCaseControl tcc = new TestCaseControl();
+            
         }
         #endregion
 

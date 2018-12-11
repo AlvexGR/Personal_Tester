@@ -104,6 +104,7 @@
     <Compile Include="ViewModels\Controls\SideBarControlViewModel.cs" />
     <Compile Include="ViewModels\Controls\SolutionTestControlViewModel.cs" />
     <Compile Include="ViewModels\IBaseViewModel.cs" />
+    <Compile Include="ViewModels\Controls\TestCaseControlViewModel.cs" />
     <Compile Include="ViewModels\Windows\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\Windows\MessagePopupWindowViewModel.cs" />
   </ItemGroup>

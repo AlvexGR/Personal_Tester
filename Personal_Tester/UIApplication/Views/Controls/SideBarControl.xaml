@@ -22,7 +22,7 @@
                 Grid.Row="0">
                 <Button
                     Name="customTestButton"
-                    Style="{DynamicResource SideBarNotSelectedButton}">
+                    Style="{StaticResource SideBarNotSelectedButton}">
                     <Grid
                         Margin="30 0 0 0">
                         <Grid.ColumnDefinitions>
@@ -47,7 +47,7 @@
                 Grid.Row="1">
                 <Button
                     Name="solutionTestButton"
-                    Style="{DynamicResource SideBarNotSelectedButton}">
+                    Style="{StaticResource SideBarNotSelectedButton}">
                     <Grid
                         Margin="30 0 0 0">
                         <Grid.ColumnDefinitions>
@@ -72,7 +72,7 @@
                 Grid.Row="2">
                 <Button
                     Name="treeCodeButton"
-                    Style="{DynamicResource SideBarNotSelectedButton}">
+                    Style="{StaticResource SideBarNotSelectedButton}">
                     <Grid
                         Margin="30 0 0 0">
                         <Grid.ColumnDefinitions>
@@ -97,7 +97,7 @@
                 Grid.Row="3">
                 <Button
                     Name="settingButton"
-                    Style="{DynamicResource SideBarNotSelectedButton}">
+                    Style="{StaticResource SideBarNotSelectedButton}">
                     <Grid
                         Margin="30 0 0 0">
                         <Grid.ColumnDefinitions>

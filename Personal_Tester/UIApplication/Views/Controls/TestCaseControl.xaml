@@ -1,0 +1,119 @@
+﻿<UserControl x:Class="UIApplication.Views.Controls.TestCaseControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UIApplication.Views.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="350" d:DesignWidth="500">
+    <Border
+        Background="White"
+        BorderBrush="Gray"
+        BorderThickness="0.6">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Border
+                BorderBrush="Gray"
+                BorderThickness="0 0 0 0.6">
+                <TextBlock
+                Text="1"
+                FontSize="17"
+                Foreground="#3B5998"
+                Margin="10 5"
+                Style="{StaticResource BaseBoldTextBlock}"/>
+            </Border>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    Text="Verdict:"
+                    Name="verdictTextBlock"
+                    Foreground="Green"
+                    Margin="10 5"
+                    Style="{StaticResource BaseBoldTextBlock}"/>
+                <TextBlock
+                    Text="OK"
+                    Name="verdictValueLabel"
+                    Grid.Column="1"
+                    Foreground="Green"
+                    Margin="0 5"
+                    Style="{StaticResource BaseBoldTextBlock}"/>
+            </Grid>
+            <TextBlock
+                Grid.Row="2"
+                Text="Input"
+                Margin="10 5"
+                Style="{StaticResource BaseBoldTextBlock}"/>
+            <TextBox
+                Grid.Row="3"
+                Margin="10 0"
+                Name="inputTextBox"
+                Text="input here.."
+                Style="{StaticResource InputTextBox}"/>
+            <TextBlock
+                Grid.Row="4"
+                Text="Expected output"
+                Margin="10 5"
+                Style="{StaticResource BaseBoldTextBlock}"/>
+            <TextBox
+                Grid.Row="5"
+                Margin="10 0"
+                Text="text here.."
+                Style="{StaticResource RightOutputTextBox}"/>
+            <TextBlock
+                Grid.Row="6"
+                Text="Your output"
+                Margin="10 5"
+                Style="{StaticResource BaseBoldTextBlock}"/>
+            <TextBox
+                Grid.Row="7"
+                Margin="10 0"
+                Text="text here.."
+                Style="{StaticResource RightOutputTextBox}"/>
+            <Grid
+                Grid.Row="8"
+                HorizontalAlignment="Left" 
+                Margin="10 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button
+                    x:Name="runButton"
+                    Margin="0 10 0 0"
+                    Height="35"
+                    Width="100"
+                    Style="{StaticResource WhiteButton}">
+                    <TextBlock
+                        Name="runTextBlock"
+                        Text="Run"
+                        Style="{StaticResource ButtonTextBlock}"/>
+                </Button>
+                <Button
+                    x:Name="deleteButton"
+                    Margin="10 10 0 0"
+                    Height="35"
+                    Width="100"
+                    Grid.Column="1"
+                    Style="{StaticResource RedButton}">
+                    <TextBlock
+                        Name="deleteTextBlock"
+                        Text="Delete"
+                        Style="{StaticResource ButtonTextBlock}"/>
+                </Button>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>
